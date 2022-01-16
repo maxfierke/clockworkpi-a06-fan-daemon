@@ -1,0 +1,8 @@
+post_install() {
+    systemctl enable clockworkpi-a06-fan-daemon.service
+    systemctl start clockworkpi-a06-fan-daemon.service
+}
+
+post_upgrade() {
+    systemctl restart clockworkpi-a06-fan-daemon.service
+}
